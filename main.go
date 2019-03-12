@@ -28,6 +28,7 @@ func setHandler() {
 	r.HandleFunc("/project", projectHandler).Methods("GET")
 
 	http.Handle("/", r)
+	http.Handle("/godBy", r)
 	http.ListenAndServe(":8080", nil)
 
 }
