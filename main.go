@@ -29,6 +29,8 @@ func setHandler() {
 	r.HandleFunc("/creators/Robert-Griesmer", robertGriesmerHandler).Methods("GET")
 	r.HandleFunc("/creators/Rob-Pike", robPikeHandler).Methods("GET")
 	r.HandleFunc("/creators/Ken-Thompson", kenThompsonHandler).Methods("GET")
+	r.HandleFunc("/go/code", goCodeHandler).Methods("GET")
+	r.HandleFunc("/go/routines", goRoutinesHandler).Methods("GET")
 
 	http.Handle("/", r)
 	http.Handle("/godBy", r)
@@ -40,6 +42,12 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 }
 func blogHandler(w http.ResponseWriter, r *http.Request) {
 	templates.ExecuteTemplate(w, "blog.html", nil)
+}
+func goRoutinesHandler(w http.ResponseWriter, r *http.Request) {
+	templates.ExecuteTemplate(w, "goRoutines.html", nil)
+}
+func goCodeHandler(w http.ResponseWriter, r *http.Request) {
+	templates.ExecuteTemplate(w, "goCode.html", nil)
 }
 func aboutHandler(w http.ResponseWriter, r *http.Request) {
 	templates.ExecuteTemplate(w, "about.html", nil)

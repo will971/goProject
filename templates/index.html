@@ -70,64 +70,7 @@
                          <span>Ce langage fut à l’origine conçu pour gérer des centres de données, consommer peu de
                               ressources et exploiter au mieux les processeurs modernes aux cœurs multiples de ce fait,
                               il intègre nativement la concurrence d’accès.</span>
-                         <h3>Pourquoi devrions-nous coder en GO ?</h3>
-                         <span>
-                              L’un des gros avantages du langage Go, c’est sa facilité d’accès, même s'il reprend la
-                              même syntaxe des années 70, Go simplifie la programmation par rapport à C++ le langage
-                              qu’il cherche à concurrencer :
-                              <ul class="list">
-                                   <li>Le fonctionnement multithread devient simple, avec une seule commande.</li>
-                                   <li>Quelques causes d'erreurs fréquentes provenant de la syntaxe sont supprimées.
-                                   </li>
-                                   <li>Le GARBAGE collector facilite la gestion de la mémoire.</li>
-                                   <li>Il n'y a pas de classe et d'héritage. On remplace les classes par des STRUCTS et
-                                        des
-                                        INTERFACES qui sont proches des objets de JavaScript. Les objets sont étendus
-                                        par
-                                        composition et non pas par héritage.</li>
-                                   <li>Les tableaux sont passés par valeurs et non comme des pointeurs.</li>
-                                   <li>Des imports de packages comme en Java plutôt que des fichiers d'en-têtes comme en
-                                        C.</li>
-                                   <li>Pas de conversion de types sans passer par une fonction.</li>
-                                   <li>Nil remplace null.</li>
-                                   <li>Le symbole de pointeur -> est remplacé par le point.</li>
-                                   <li>Les incréments -- et ++ ne peuvent pas s'utiliser dans des expressions.</li>
-                                   <li>Les constantes peuvent être déclarées sans type.</li>
-                                   <li>New est une fonction et non pas un opérateur.</li>
-                              </ul>
-                              Cependant, pour ceux qui voudraient aussi faire du développement web, il est aussi
-                              possible de le faire en Go !
-                              Java étant l’un des langages phare dans ce domaine actuellement, il me semble donc
-                              judicieux comparer ces deux langages.
-                              Java a été conçu comme un langage pour le Web et est devenu populaire grâce à cela. Il
-                              peut fonctionner sur le serveur ou sur le poste client grâce à des applets (celles-ci sont
-                              devenues obsolètes). Son principal intérêt est sa bibliothèque d'interface graphique très
-                              étendue.
-                              Go comme Java permet de tester immédiatement un programme ou un script en développement,
-                              mais il produit du code binaire, donc plus rapide et compact.
-                         </span>
-                         <h3> Comment est géré le multithreading actuellement?</h3>
-                         <span>
-                              Les langages de programmations modernes tel que Java et Python par exemple, fonctionne
-                              selon l'environnement à thread unique dont le concept date d'il y'a au moins 20 ans. Même
-                              s'il est vrai qu'ils supportent le multithreading, il est vrai aussi qu'il est difficile
-                              de créer une application multithread à l'aide de ces langages.
-                              En Java par exemple, il est très difficile de communiquer entre plusieurs threads et qui
-                              plus est, il n'est pas efficace de créer un nouveau thread en termes de mémoire. La preuve
-                              en est que chaque thread consomme plus ou moins 1 Mo de la mémoire. Le manque de mémoire
-                              ce ferra alors rapidement ressentir lors de l'utilisation de milliers de threads
-                              simultanément ce qui pourrais causer un disfonctionnement dans votre application.*
-                         </span>
-                         <h3>En quoi Go se distingue des autres langages pour le multithreading ?</h3>
-                         <span>
-                              Le langage Go a vu le jour en 2009, alors que les processeurs aux cœurs multiples
-                              existaient déjà. Il a donc été pensé de manière à profiter au maximum des différents cœurs
-                              des processeurs. C’est pour cette raison que Go utilise des GOROUTINES ! Au lieu de
-                              consommer 1 Mo de mémoire (comme les threads), ces derniers consomment environ 2 Ko de
-                              mémoire. Nous pouvons donc faire fonctionner des millions de GOROUTINES en même temps. En
-                              plus de consommer moins que les threads, elles démarrent plus vite et peuvent nativement
-                              communiquer entre elles ce qui facilite la concurrence d’accès aux données.
-                         </span>
+
                     </div>
 
                </div>
@@ -141,7 +84,7 @@
                <div class="row">
 
                     <div class="col-md-4 col-sm-6">
-                         <a href="project">
+                         <a href="/go/code">
                               <div class="portfolio-thumb">
                                    <img src="/static/Magnet/images/portfolio-img1.jpg" class="img-responsive"
                                         alt="Portfolio">
@@ -171,7 +114,7 @@
                     </div>
 
                     <div class="col-md-4 col-sm-6">
-                         <a href="project">
+                         <a href="/go/routines">
                               <div class="portfolio-thumb">
                                    <img src="/static/Magnet/images/portfolio-img3.jpg" class="img-responsive"
                                         alt="Portfolio">
@@ -184,7 +127,9 @@
                               </div>
                          </a>
                     </div>
-<div class="col-md-12 col-sm-12"><h2>Qui sont les cerveaux à l'origine de Go ? </h2></div>
+                    <div class="col-md-12 col-sm-12">
+                         <h2>Qui sont les cerveaux à l'origine de Go ? </h2>
+                    </div>
                     <div class="col-md-4 col-sm-6">
                          <a href="/creators/Rob-Pike">
                               <div class="portfolio-thumb">
@@ -231,7 +176,8 @@
                     </div>
 
                     <div class="col-md-12 col-sm-12 text-center">
-                         <h3>Si cette présentation du langage Go te plais, je t'invite à me laisser un message <a href="contact">ici</a></h3>
+                         <h3>Si cette présentation du langage Go te plais, je t'invite à me laisser un message <a
+                                   href="contact">ici</a></h3>
                     </div>
 
                </div>
@@ -253,7 +199,8 @@
                     </div>
 
                     <div class="col-md-offset-1 col-md-4 col-sm-offset-1 col-sm-3">
-                         <p><a href="mailto:williams.modeste2017@campus-eni.fr">williams.modeste2017@campus-eni.fr</a></p>
+                         <p><a href="mailto:williams.modeste2017@campus-eni.fr">williams.modeste2017@campus-eni.fr</a>
+                         </p>
                          <p>0778 43 08 73</p>
                     </div>
 
