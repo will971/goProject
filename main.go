@@ -26,6 +26,9 @@ func setHandler() {
 	r.HandleFunc("/contact", contactHandler).Methods("GET")
 	r.HandleFunc("/post", postHandler).Methods("GET")
 	r.HandleFunc("/project", projectHandler).Methods("GET")
+	r.HandleFunc("/creators/Robert-Griesmer", robertGriesmerHandler).Methods("GET")
+	r.HandleFunc("/creators/Rob-Pike", robPikeHandler).Methods("GET")
+	r.HandleFunc("/creators/Ken-Thompson", kenThompsonHandler).Methods("GET")
 
 	http.Handle("/", r)
 	http.Handle("/godBy", r)
@@ -49,4 +52,13 @@ func postHandler(w http.ResponseWriter, r *http.Request) {
 }
 func projectHandler(w http.ResponseWriter, r *http.Request) {
 	templates.ExecuteTemplate(w, "single-project.html", nil)
+}
+func robPikeHandler(w http.ResponseWriter, r *http.Request) {
+	templates.ExecuteTemplate(w, "robPike.html", nil)
+}
+func robertGriesmerHandler(w http.ResponseWriter, r *http.Request) {
+	templates.ExecuteTemplate(w, "robertGriesmer.html", nil)
+}
+func kenThompsonHandler(w http.ResponseWriter, r *http.Request) {
+	templates.ExecuteTemplate(w, "kenThompson.html", nil)
 }
