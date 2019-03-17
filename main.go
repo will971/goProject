@@ -29,6 +29,7 @@ func setHandler() {
 	r.HandleFunc("/creators/Ken-Thompson", kenThompsonHandler).Methods("GET")
 	r.HandleFunc("/go/code", goCodeHandler).Methods("GET")
 	r.HandleFunc("/go/routines", goRoutinesHandler).Methods("GET")
+	r.HandleFunc("/pourquoi-choisir-go", whyGoHandler).Methods("GET")
 	http.Handle("/", r)
 	http.Handle("/godBy", r)
 	http.ListenAndServe(":8080", nil)
@@ -48,6 +49,9 @@ func goUsersHandler(w http.ResponseWriter, r *http.Request) {
 }
 func contactHandler(w http.ResponseWriter, r *http.Request) {
 	templates.ExecuteTemplate(w, "contact.html", nil)
+}
+func whyGoHandler(w http.ResponseWriter, r *http.Request) {
+	templates.ExecuteTemplate(w, "whyGo.html", nil)
 }
 func postHandler(w http.ResponseWriter, r *http.Request) {
 	templates.ExecuteTemplate(w, "single-post.html", nil)
